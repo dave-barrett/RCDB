@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script> 
+<link rel="stylesheet" type="text/css" href="../_res/_css/optimus.css">
+</head>
+<body>
+<div id="mainbody" class="mainbody">
+<h1>CEVA Logistics :: techNET :: Portal :: Login</h1>
+<br/>
+You have arrived at the CEVA techNET web portal. Please login below if you are authorised to do so. 
+<br/>
+If you are not authorised to access this platform please close the browser session now.  
+<br/>
+Otherwise please click the button below and enter you details. 
+<p>
+<button onclick="document.getElementById('id01').style.display='block'" class="buttonstyle">Login</button>
+<p>
+<a class="" href="../indextn.php">Return to previous page.</a>
+</div>
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="do_login.php" method="post">
+    <div class="imgcontainer">
+    </div>
+    <div class="container">
+	<div class="cntrthis">
+      <label><b>Username: </b></label>
+      <input type="text" placeholder="Enter Username" name="uname" class="inputstyle" required>
+      <label><b>Password: </b></label>
+      <input type="password" placeholder="Enter Password" name="psw" class="inputstyle" required>
+      <button type="submit" class="buttonstyle">Login</button>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
+	</div>
+    <div class="container">
+	<div class="cntrthis">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="buttonstyle">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+	</div>
+  </form>
+</div> 
+</body>
+</html>

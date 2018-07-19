@@ -1,0 +1,330 @@
+/*
+This is a copy of another CSS - there are many elements that are not used. Add a clean up of this to the snagging list.
+*/
+
+body {
+  background-color: lightgrey;
+  font face="calibri"
+}
+
+.mainbody {
+	text-align: center;
+	background-color: rgb(200,200,200);
+	border-style: solid;
+	border-color: red;
+}
+
+.headerdiv {
+  width: 88%;
+  margin-right:auto;
+  margin-left:auto;
+  border-style: solid;
+  border-width: 2px 2px 0px 2px;
+  border-color: black;
+  background-color: rgba(153,0,51,1);
+  font-size: 26px;
+  color: white;
+  text-align: center;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.welcomediv {
+  width: 88%;
+  margin-right:auto;
+  margin-left:auto;
+  background-color: rgba(153,0,51,1);
+  font-size: 14px;
+  text-align: right;
+}
+
+.maincontentdiv {
+  width: 88%;
+  margin-right:auto;
+  margin-left:auto;
+  border-style: solid;
+  border-width: 0px 2px 0px 2px;
+  border-color: black;
+  background-color: rgba(255,255,255,1);
+  font-size: 14px;
+  padding-left: 4px;
+  padding-right: 4px;
+  text-align: center;
+}
+
+.navbardiv {
+  width: 95%;
+  margin-right:auto;
+  margin-left:auto; 
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: black;
+  background-color: rgba(153,0,51,1);
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.footerdiv {
+  width: 88%;
+  margin-right:auto;
+  margin-left:auto;
+  border-style: solid;
+  border-width: 0px 2px 2px 2px;
+  border-color: black;
+  background-color: rgba(153,0,51,1);
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.formlayout1 {
+  display: inline-block;
+  width: 24%;
+  text-align: right;
+  padding: 4px;
+  float: left;
+}
+
+.formlayout2 {
+  width: 100%;
+  text-align: center;
+  padding: 4px;
+}
+
+.ctr_red {
+  width: 100%;
+  text-align: center;
+  padding: 4px;
+  color: rgb(255,255,255);
+}
+
+a:visited, a:link {
+  color: white;
+}
+
+a:hover {
+  color: black;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=time], input[type=date] {
+  padding: 1px 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(153,0,51);
+  border-radius: 4px;
+  background-color: lightgrey;
+}
+
+input[type=text]:focus {
+     background-color: white;
+}
+
+input[type=password]:focus {
+     background-color: white;
+}
+
+input[type=email]:focus {
+     background-color: white;
+}
+
+select {
+  padding: 1px 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(153,0,51);
+  border-radius: 4px;
+  background-color: rgb(153,0,51,);
+}
+
+.selWlimit1 {
+  width: 160px;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: rgb(153,0,51);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(0,0,0);
+  border-radius: 4px;
+  color: white;
+  padding: 4px 4px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(0,0,0);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(153,0,51);
+  border-radius: 4px;
+  color: white;
+  padding: 4px 4px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+textarea {
+    width: 75%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: lightgrey;
+    resize: none;
+}
+
+textarea:focus {
+  background-color: white;
+}
+
+input[type=checkbox] {
+  -ms-transform: scale(1.6);
+  -moz-transform: scale(1.6);
+  -webkit-transform: scale(1.6);
+  -o-transform: scale(1.6);
+  padding: 4px;
+  background-color: rgb(153,0,51);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(153,0,51);
+}
+
+th {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(0,0,0);
+  background-color: rgba(153,0,51,1);
+  color: white;
+  text-align: center;
+  padding: 2px;
+}
+
+td {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(153,0,51);
+  color: black;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: rgba(153,0,51,1); 
+}
+
+a.whitebg:link, a.whitebg:visited {
+  color: black;
+}
+
+a.whitebg:hover {
+  color: rgb(153,0,51);
+}
+
+table {
+  width: 60%;
+  padding: 3px;
+  margin: 0 auto;
+}
+
+.datatablesclps {
+  border-color: rgb(153,0,51);
+  border-collapse: collapse;
+  border-spacing: 1;
+}
+
+.datatables {
+  text-align:center;
+  padding: 4px;
+  margin: 4px;
+  max-height: 800px;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+tr:nth-child(odd) {
+  color: rgb(153,0,51); 
+}
+
+tr:hover {
+  background-color: lightgrey;
+}
+
+.bmsg {
+	border-color: rgb(153,0,51);
+	color: rgb(153,0,51);
+	background-color: lightgrey;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 4px;
+}
+
+.searchdiv {
+	text-align: center;
+
+
+.trunktable {
+  border-spacing: 1;
+  border: 0px solid #999;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  width: 100%;
+}
+
+.trunktd, .trunkth {
+  border: 1px solid;
+  border-color: rgb(153,0,51);
+  border-radius: 4px;
+  border-spacing: 1px;
+  padding: 5px;
+  text-align: center;
+}
+tr:hover {
+  background-color: rgba(30,30,200,0.5);
+}
+.trunktd {
+  background-color: rgba(255,255,255,0.3);
+}
+.trunkth {
+  background-color: rgba(153,0,51,1);
+  color: rgb(255,255,255);
+}
+
+.clocktext {
+  font-size: 88px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  color: rgba(153,0,51,1.0);
+}
+
+.insoon {
+  background-color: rgba(160,160,160,1);
+  color: rgba(230,230,230,1);
+}
+.late {
+  background-color: rgba(5,5,5,1);
+  color: rgba(150,150,150,1);
+}
+.trunka {
+  color: rgba(120,120,120,1);
+}
+.redbdr {
+  text-align: center;
+  border: 1px solid red;
+  background-color: rgba(60,60,60,0.2);
+}
+
+.page {
+  background-color: rgba(80,80,80,0.2);
+  color: rgba(200,5,5,1.0);
+}
