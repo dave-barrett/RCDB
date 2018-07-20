@@ -1,0 +1,88 @@
+
+header("Content-Type: application/xls");
+header("Content-Disposition: attachment; filename=download.xls");
+
+
+
+
+onload="window.print()
+
+
+
+
+
+
+if(isset($_GET['serialsearch'])){
+	
+	$param = $_GET['searchparam'];
+	
+	$conn = mysqli_connect("localhost","root","","dbroutecard");
+	$sqlsearch = mysqli_query($conn, "select * from tblrecords where record_serial_number like '%".$param."%' limit 1");
+	
+	if(mysqli_num_rows($sqlsearch) > 0){
+		
+		
+		
+		$row = mysqli_fetch_assoc($sqlsearch);
+		$_SESSION['counter'] = $row['record_id'];
+		
+	}else{
+		
+		
+		
+	}
+	
+	header("Location: findroutecard.php");
+	
+}
+
+
+
+
+
+if(isset($_GET['editrecord'])){
+	
+	$id = $_GET['txtrcid'];
+	$conn = mysqli_connect("localhost","root","","dbroutecard");
+	$sqlupdate = mysqli_query($conn, "update tblrecords set record_client='".$_GET['clientselected']."', record_client_contact_name='".$_GET['clientname']."', record_jobtype='".$_GET['jobtype']."', record_order_number='".$_GET['orderno']."', record_model='".$_GET['model']."', record_size='".$_GET['selectedsize']."', record_meter_in='".$_GET['meterin']."', record_meter_out='".$_GET['meterout']."', record_man_hours='".$_GET['manhours']."', record_sanitised='".$_GET['sanitised']."', record_packaging='".$_GET['packaging']."', record_technician='".$_GET['engineer']."', record_comments='".$_GET['comment']."', record_parts_used='".$_GET['partsused']."', record_serial_number='".$_GET['serialno']."' where record_id='$id'");
+	$_SESSION['counter'] = $id;
+	
+	
+	
+	
+	
+	$sqlrecollect = mysqli_query($conn, "select * from tblrecords where record_id='$id'");
+	$row = mysqli_fetch_assoc($sqlrecollect);
+	
+	$_SESSION['recid'] = $row['record_id'];
+	$_SESSION['thedate'] = $row['record_date'];
+	
+	$_SESSION['clientid'] = $row['record_client'];
+	$_SESSION['clientname'] = $row['record_client_contact_name'];
+	$_SESSION['jobtype'] = $row['record_jobtype'];
+	
+	$_SESSION['orderno'] = $row['record_order_number'];
+	$_SESSION['model'] = $row['record_model'];
+	$_SESSION['machinesize'] = $row['record_size'];
+	
+	$_SESSION['meterin'] = $row['record_meter_in'];
+	$_SESSION['meterout'] = $row['record_meter_out'];
+	$_SESSION['manhours'] = $row['record_man_hours'];
+	
+	$_SESSION['sanitised'] = $row['record_sanitised'];
+	$_SESSION['packaging'] = $row['record_packaging'];
+	$_SESSION['technician'] = $row['record_technician'];
+	
+	$_SESSION['comments'] = $row['record_comments'];
+	$_SESSION['partsused'] = $row['record_parts_used'];
+	$_SESSION['serialno'] = $row['record_serial_number'];
+	
+	header("Location: printamendment.php");
+	
+}
+
+
+
+
+
+

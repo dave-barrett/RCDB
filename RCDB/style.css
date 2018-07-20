@@ -1,0 +1,225 @@
+#wrap{
+	padding:1%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	border-style: outset;
+	font-family: arial;
+	text-align:center;
+}
+
+#titletext{
+	margin-bottom: 20px;
+}
+
+#content{
+	margin-top: 5px;
+	margin-left:auto;
+	margin-right:auto;
+	border: outset;
+	color: white;
+	padding:2%;
+	font-size: 21px;
+}
+
+#title{
+	margin-top: 5px;
+	margin-left:auto;
+	margin-right:auto;
+	border: outset;
+	font-size: 21px;
+
+}
+
+#divide{
+	border-right-style:outset;
+}
+
+#buttonlayout{
+	height: 40px;
+	width: 200px;
+	border-style: outset;
+	font-size:15px;
+}
+
+
+ /* styling for the route card */
+ 
+ #cardwrap{
+	padding:1%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 96%;
+	border-style: outset;
+	font-family: arial;
+	 
+ }
+ 
+ #cardid{
+	 border-style: none;
+	 color: white;
+ }
+ #leftalign{
+	 text-align: LEFT;
+	 
+ }
+ 
+#textboxsize{
+	height: 30px;
+	width: 200px;
+	font-size: 20px;
+	
+}
+
+#textboxsize2{
+	height: 30px;
+	width: 300px;
+	font-size: 20px;
+	
+}
+
+#textboxsize4{
+	height: 30px;
+	width: 295px;
+	font-size: 20px;
+	
+}
+
+#textboxsize3{
+	height: 30px;
+	width: 205px;
+	font-size: 25px;
+	
+}
+
+#textboxsizeclient{
+	height: 30px;
+	width: 205px;
+	font-size: 20px;
+	
+}
+
+#labelfont{
+	font-size: 20px;
+}
+
+#cardcontent{
+	border-style: outset;
+	color: white;
+	font-family: arial;
+	font-size: 20px;
+	padding-bottom: 5px;
+	text-align: right;
+}
+
+#cardcontenttab{
+	border-style: none;
+	margin-top: 10px;
+	Padding:10px; 
+
+}
+
+ #leftalign2{
+	 text-align: right;
+	 border-top:outset;
+	 border-left:outset;
+ }
+ 
+ #midalign{
+	 text-align: right;
+	 border-top:outset;
+
+ }
+ 
+ #rightalign{
+	 text-align: right;
+	 border-top:outset;
+	 border-right:outset;
+ }
+ 
+ #optfont{
+	font-size: 20px; 
+	 
+ }
+ 
+ #rcdesc{
+	 text-align: left;
+	 border-style: none;
+ }
+ 
+#textarea1{
+
+	resize:none;
+	width: 96%;
+	height: 200px;
+	padding: 10px;
+	font-size: 20px;
+	font-family: arial;
+	 
+ }
+
+ #labelfontdesc{
+	 font-size:20px;
+	 color: white;
+ }
+ 
+ #textarea2{
+
+	resize:none;
+	width: 98%;
+	height: 220px;
+	padding: 10px;
+	font-size: 190px;
+	font-family: arial;
+	text-align:left;
+	 
+ }
+ 
+ #serialaligner{
+	 text-align: left;
+	 
+ }
+ 
+ #buttonlayout2{
+	height: 40px;
+	width: 160px;
+	border-style: outset;
+	font-size:25px;
+	text-decoration:none;
+}
+
+#kpitable{
+	border-style: solid; 
+	
+}
+
+#searchitems{
+	border-style: outset;
+	
+}
+
+ #buttonlayout3{
+	height: 40px;
+	width: 100px;
+	border-style: outset;
+	font-size:25px;
+	text-decoration:none;
+ }	
+
+ #buttonlayout4{
+	height: 40px;
+	width: 120px;
+	border-style: outset;
+	font-size:25px;
+	text-decoration:none;
+ }
+ 
+ 
+ 
+#centertable{
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 25px;
+	color: white;
+	}
