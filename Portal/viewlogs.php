@@ -9,7 +9,7 @@ echo "<!DOCTYPE html>";
 echo "<html>";
 echo "<head>";
 echo "<title>" . $pagetitle . "</title>";
-include '_inc/inc_csslink.php';
+include '../_inc/inc_csslink.php';
 echo "</head>";
 echo "<body>";
 if ($_SESSION['login_user'] == "") {
@@ -25,7 +25,7 @@ echo "<label for='selLog'>Select log to view: </label>";
 <select onchange="location = this.options[this.selectedIndex].value;">
 <?php
 echo "<option value='viewlogs.php?lid=none'>Select Log</option>";
-foreach (new DirectoryIterator("_log/") as $file) {
+foreach (new DirectoryIterator("../_res/_log/") as $file) {
   if ($file->isFile()) {
     $tempfile = $file->getFilename();
       echo "<option id='selLog' name='selLog' value='viewlogs.php?lid=" . $tempfile;
@@ -86,7 +86,7 @@ echo "</textarea>";
 echo "<br/><br/><br/>";
 echo "<a class='whitebg' href='admin.php'>RETURN TO ADMIN PAGE</a>";
 echo "</div>";
-include '_inc/inc_footer.php';
+include '../_res/_inc/inc_footer.php';
 echo "</body>";
 echo "</html>";
 ?>
