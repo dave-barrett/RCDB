@@ -3,7 +3,7 @@ session_start();
 if ($_SESSION['portal_level'] < 100) {
   header ("location: indextn.php");
 }
-include '_inc/inc_dbcon_login.php';
+include '../_res/_inc/inc_dbcon_login.php';
 $usernamein = $_POST['txtUsername'];
 $passwordin = $_POST['txtPassword'];
 $fullnamein = $_POST['txtFullname'];
