@@ -1,0 +1,5 @@
+ErrorDocument 400 /_SITEERROR_/tnsvrerr.php?err=400
+ErrorDocument 401 /_SITEERROR_/tnsvrerr.php?err=401
+ErrorDocument 403 /_SITEERROR_/tnsvrerr.php?err=403
+ErrorDocument 404 /_SITEERROR_/tnsvrerr.php?err=404
+ErrorDocument 500 /_SITEERROR_/tnsvrerr.php?err=500
