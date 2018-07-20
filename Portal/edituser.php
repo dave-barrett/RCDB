@@ -1,9 +1,9 @@
 <?php
 session_start();
 if ($_SESSION['portal_level'] < 100) {
-  header("location: indextn.php");
+  header("location: ../indextn.php");
 }
-include '_inc/inc_dbcon_login.php';
+include '../_res/_inc/inc_dbcon_login.php';
 $pageid = 101;
 $pagetitle = "techNET :: Portal :: Edit User " . $_GET['un'];
 $sql = "SELECT * FROM tblUsers WHERE UserID = " . $_GET['uid'];
@@ -13,13 +13,13 @@ echo "<!DOCTYPE html>";
 echo "<html>";
 echo "<head>";
 echo "<title>" . $pagetitle . "</title>";
-include '_inc/inc_csslink.php';
+include '../_res/_inc/inc_csslink.php';
 echo "</head>";
 echo "<body>";
 if ($_SESSION['login_user'] == "") {
   echo "<div class='headerdiv'>" . $pagetitle . "<br/></div>";
 } else {
-  include '_inc/inc_header.php';
+  include '../_res/_inc/inc_header.php';
 }
 echo "<div class='maincontentdiv'><br/>";
 echo "<form onsubmit='' name='edituser' id='edituser' action='do_edituser.php' method='post'>";
@@ -104,7 +104,7 @@ echo "</form>";
 echo "<br/><br/><br/>";
 echo "<a class='whitebg' href='../indextn.php'>RETURN TO HOME PAGE</a>";
 echo "</div>";	
-include '_inc/inc_footer.php';
+include '../_res/_inc/inc_footer.php';
 echo "</body>";
 echo "</html>";
 
