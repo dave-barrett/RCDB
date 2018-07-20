@@ -1,9 +1,9 @@
 <?php
 session_start();
 if ($_SESSION['portal_level'] < 100) {
-  header("location: indextn.php");
+  header("location: ../indextn.php");
 }
-include '_inc/inc_dbcon_login.php';
+include '../_res/_inc/inc_dbcon_login.php';
 $length = 12;
 $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 $charactersLength = strlen($characters);
@@ -33,7 +33,7 @@ if ($conn->query($sql) === TRUE) {
   }
   echo "<div class='maincontentdiv'><br/>";
   echo "Password had been updated for " . $row['UserName'] . ". The new password is " . $randomString . " please inform the user as no email or notification has been sent.";
-  $conn->close();
+  mysqli_close($conn);
   echo "<br/><br/><br/>";
   echo "<a class='whitebg' href='admin.php'>RETURN TO ADMIN PAGE</a>";
   echo "</div>";	
@@ -49,7 +49,7 @@ include "do_addtolog.php";
   fwrite($myfile, $txt);
   fclose($myfile);  */
 } else {
-  $conn->close();
+  mysqli_close($con);
   header("location: edituser.php?eid=1"); // message for error - something went wrong
 }
 ?>
