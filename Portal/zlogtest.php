@@ -13,7 +13,7 @@ echo "<br/>";
 echo "year " . $year;
 echo "<br/>";
 //------------- 
-$pathtolog = "_log/";
+$pathtolog = "../_res/_log/";
 $loginuse = $pathtolog . $month . $year ."_Portal.log";
 $myfile = fopen($loginuse, "a+") or die("Unable to open file!");
 $txt = "\n" . date('d/m/Y H:i:s') . " » " . $_SESSION['login_user'] . " » logged in.";
@@ -28,7 +28,7 @@ echo "<label for='selLog'>Select log to view: </label>";
 ?>
 <select onchange="location = this.options[this.selectedIndex].value;">
 <?php
-foreach (new DirectoryIterator("_log/") as $file) {
+foreach (new DirectoryIterator("../_res/_log/") as $file) {
   if ($file->isFile()) {
     $tempfile = $file->getFilename();
       echo "<option id='selLog' name='selLog' value='zlogtest.php?lid=" . $tempfile;
@@ -49,7 +49,7 @@ echo "</select>";
 echo "<br/>";
 if ($_GET['lid'] == "all") {
 $filetext = "";
-$directory = "_log/";
+$directory = "../_res/_log/";
 $dir = opendir($directory);
 while (($file = readdir($dir)) !== false) {
   $filename = $directory . $file;
@@ -62,7 +62,7 @@ while (($file = readdir($dir)) !== false) {
 closedir($dir);
 } else {
 $filetext = "";
-$directory = "_log/";
+$directory = "../_res/_log/";
 $dir = opendir($directory);
 $file = $_GET['lid'];
 $filename = $directory . $file;
@@ -72,54 +72,5 @@ $contents = file_get_contents($filename);
 echo "<textarea>" . $filetext . "</textarea>";
 echo "</body>";
 echo "</html>";
-/*
-GET THE MONTH AND YEAR
-accepted
-Full version:
-<? echo date('F Y'); ?>
-Short version:
-<? echo date('M Y'); ?>
-Here is a good reference for the different date options.
-update
-To show the previous month we would have to introduce the mktime() function
-and make us of the optional timestamp parameter for the date() function. Like this:
-echo date('F Y', mktime(0, 0, 0, date('m')-1, 1, date('Y')));
-This will also work (it's typically used to get the last day of the previous month):
-echo date('F Y', mktime(0, 0, 0, date('m'), 0, date('Y')));
-Hope that helps.
-=================================
-SIMPLER
-   $now = new \DateTime('now');
-   $month = $now->format('m');
-   $year = $now->format('Y');
-===================================
-GET ALL THE FILENAMES FROM A DIR
-foreach (new DirectoryIterator("_log/") as $file) {
-  if ($file->isFile()) {
-      print $file->getFilename() . "\n";
-  }
-}
-=======================================
 
-READING MULTIPLE TEXT FILES IN TO PHP
-
-$directory = "_log/";
-$dir = opendir($directory);
-while (($file = readdir($dir)) !== false) {
-  $filename = $directory . $file;
-  $type = filetype($filename);
-  if ($type == 'file') {
-     $contents = file_get_contents($filename);
-     $items = explode('¬', $contents);
-     echo '<table width="500" border="1" cellpadding="4">';
-     foreach ($items as $item) {
-       echo "<tr><td>$item</td></tr>\n";
-     }
-     echo '</table>';
-  }
-}
-closedir($dir);
-
- */
- 
  ?>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '_inc/inc_dbcon_login.php';
+include '../_res/_inc/inc_dbcon_login.php';
 if($_SERVER["REQUEST_METHOD"] == "POST") {      
   $usernamein = $_POST['uname'];
   $passwordin = $_POST['psw'];
@@ -39,7 +39,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       $datestamp = date("Y-m-d  H:i:s");
       $sql = "UPDATE tblUsers SET UserLoggedOnNow = '1', UserLastLogon = '" . $datestamp . "' WHERE UserName = '$usernamein'";
       mysqli_query($conn,$sql);
-      $conn->close(); 
+      mysqli_close($con);
       $logmsg = "login";
       include 'do_addtolog.php';
       header("location: ../indextn.php");

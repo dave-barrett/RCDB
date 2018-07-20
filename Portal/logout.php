@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '_inc/inc_dbcon_login.php';
+include '../_res/_inc/inc_dbcon_login.php';
 $usernamein = $_SESSION['login_user'];
 if ($_SESSION['login_user'] <> "") {
 $logmsg = "logout";

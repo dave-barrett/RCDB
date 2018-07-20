@@ -38,5 +38,5 @@ if ($conn->query($sql) === TRUE) {
 } else {
   header("location: error.php?eid=3");
 }
-$conn->close();
+mysqli_close($conn);
 ?>

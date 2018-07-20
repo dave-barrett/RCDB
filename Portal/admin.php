@@ -3,7 +3,7 @@ session_start();
 if ($_SESSION['portal_level'] < 100) {
   header ("location: ../indextn.php");
 }
-include '_inc/inc_dbcon_login.php';
+include '../_res/_inc/inc_dbcon_login.php';
 $pageid = 101;
 $pagetitle = "techNET :: Portal :: ADMIN";
 $sql = "SELECT * FROM tblUsers WHERE UserPortalLevel <= " . $_SESSION['portal_level'] . " AND UserID <> " . $_SESSION['UserID'];
