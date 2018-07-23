@@ -1,0 +1,48 @@
+<?php
+start_session();
+$_SESSION["plvl"] = "1";
+$_SESSION["rcdblvl"] = "0";
+?>
+
+<html lang="en-GB"> 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+function writeemail() {
+var fname = document.getElementById('txtFirstName').value;
+var lname = document.getElementById('txtLastName').value;
+var emailout = fname + "." + lname + "@cevalogistics.com";
+document.getElementById('txtEmail').value = emailout;
+}
+</script>
+</head>
+
+<body>
+
+<span>This will be hidden with PHP and only displayed if there is a global message ---- Admin to post Global message.</span>
+
+
+Level drop downs with be the logged in users current level minus 1.
+<br/>
+Create new user:
+<form id='frmCreateNewUser' name='frmCreateNewUser' action='do_user_func.php?rq=1' method='post'>
+<table>
+<tr><td><label for='txtFirstName'>First Name: </label></td><td><input type='text' id='txtFirstName' name='txtFirstName' onkeyup='writeemail()' required></td></tr>
+<tr><td><label for='txtLastName'>Last Name: </label></td><td><input type='text' id='txtLastName' name='txtLastName' onkeyup='writeemail()' required></td></tr>
+<tr><td><label for='txtEmail'>Email: </label></td><td><input type='text' id='txtEmail' name='txtEmail' required></td></tr>
+<tr><td><label for='selSite'>Site: </label></td><td><select id='selSite' name='selSite' required><option>0</option></select></td></tr>
+<tr><td><label for='selPortalLevel'>Portal Level: </label></td><td><select id='selSite' name='selSite' required><option>0</option></select></td></tr>
+<tr><td><label for='selRCDBLevel'>RCDB Level: </label></td><td><select id='selSite' name='selSite' required><option>0</option></select></td></tr>
+<tr><td colspan='2'><input type='submit' value='Create User'></td></tr>
+</table>
+</form>
+System will then workout the user name (lastname+initial + check username does not already exist. if it does it will add a number.) <br/>
+regdate will be written <br/>
+password will be written <br/>
+access code will be written
+
+</body>
+
+</html>
+
